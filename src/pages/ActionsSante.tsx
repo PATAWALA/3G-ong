@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import SectionTitle from '../components/UI/SectionTitle';
-import { FaHeartbeat, FaHandsHelping, FaLeaf, FaCalendarCheck, FaUserMd } from 'react-icons/fa';
+import { FaHeartbeat, FaLeaf, FaCalendarCheck, FaUserMd } from 'react-icons/fa';
 import { motion } from 'motion/react';
 
 const maladies = [
