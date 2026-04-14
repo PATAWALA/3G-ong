@@ -23,9 +23,10 @@ export default function MissionSection() {
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="absolute -bottom-6 -left-6 bg-primary-600 text-white px-6 py-3 rounded-xl shadow-lg">
-              <p className="font-bold text-lg">3G ONG</p>
-              <p className="text-sm opacity-90">Depuis 2024</p>
+            {/* Badge : petit décalage sur mobile, plus prononcé sur desktop */}
+            <div className="absolute -bottom-3 -left-3 lg:-bottom-6 lg:-left-6 bg-primary-600 text-white px-5 py-2 lg:px-6 lg:py-3 rounded-xl shadow-lg">
+              <p className="font-bold text-base lg:text-lg">3G ONG</p>
+              <p className="text-xs lg:text-sm opacity-90">Depuis 2024</p>
             </div>
           </div>
 
@@ -50,7 +51,6 @@ export default function MissionSection() {
               </p>
             </div>
             
-            {/* Nouveau bouton vert */}
             <Link
               to="/a-propos"
               className="inline-flex items-center gap-2 bg-primary-600 hover:bg-primary-700 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg"
