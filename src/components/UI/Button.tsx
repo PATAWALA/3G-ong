@@ -1,5 +1,5 @@
-import type { motion, HTMLMotionProps } from 'motion/react';
-import type  { ReactNode } from 'react';
+import { motion, type HTMLMotionProps } from 'motion/react';
+import type { ReactNode } from 'react';   // ✅ import type pour ReactNode
 
 interface ButtonProps extends HTMLMotionProps<'button'> {
   children: ReactNode;
