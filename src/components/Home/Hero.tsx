@@ -2,6 +2,9 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Link } from 'react-router-dom';
 
+// Import de l'image locale pour la culture
+import heroCulture from '../../assets/images/culturehero.jpg';
+
 interface Slide {
   imageUrl: string;
   title: string;
@@ -33,7 +36,8 @@ const slides: Slide[] = [
     buttonLink: '/actions/sante',
   },
   {
-    imageUrl: 'https://images.unsplash.com/photo-1532635241-17e820acc59f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
+    // Utilisation de l'image locale pour la culture
+    imageUrl: heroCulture,
     title: 'Promouvoir la culture',
     subtitle: 'Valorisation des talents artistiques et sportifs',
     buttonText: 'Voir les événements',
@@ -97,11 +101,11 @@ export default function Hero() {
                 {slides[currentIndex].subtitle}
               </p>
               <Link
-  to={slides[currentIndex].buttonLink}
-  className="inline-block bg-primary-600 hover:bg-primary-700 text-white font-bold px-8 py-4 rounded-lg text-lg transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-0.5"
->
-  {slides[currentIndex].buttonText}
-</Link>
+                to={slides[currentIndex].buttonLink}
+                className="inline-block bg-primary-600 hover:bg-primary-700 text-white font-bold px-8 py-4 rounded-lg text-lg transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-0.5"
+              >
+                {slides[currentIndex].buttonText}
+              </Link>
 
               {/* Avatars avec texte corrigé */}
               <div className="mt-12 flex items-center gap-4">
