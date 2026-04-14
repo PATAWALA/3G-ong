@@ -3,12 +3,20 @@ import SectionTitle from '../components/UI/SectionTitle';
 import {
   FaMusic,
   FaPalette,
-  FaFutbol,
   FaTheaterMasks,
   FaCamera,
   FaTicketAlt,
 } from 'react-icons/fa';
 import { motion } from 'motion/react';
+
+// Imports des images locales (place ces fichiers dans src/assets/images/culture/)
+import imgIntroCulture from '../assets/images/culture/intro-culture.jpg';
+import imgDanseTraditionnelle from '../assets/images/culture/danse-traditionnelle.jpg';
+import imgArtistesEmergents from '../assets/images/culture/artistes-emergents.jpg';
+import imgTheatreForum from '../assets/images/culture/theatre-forum.jpg';
+import imgGalerie1 from '../assets/images/culture/galerie-1.jpg';
+import imgGalerie2 from '../assets/images/culture/galerie-2.jpg';
+import imgGalerie3 from '../assets/images/culture/galerie-3.jpg';
 
 const events = [
   {
@@ -16,37 +24,25 @@ const events = [
     title: 'Festival de Musique Traditionnelle',
     date: 'Août 2026',
     description: 'Célébration des rythmes et danses du Bénin.',
-    image: 'https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6a3?w=600&h=400&fit=crop',
+    image: imgDanseTraditionnelle,
   },
   {
     icon: FaPalette,
     title: 'Exposition Artistes Émergents',
     date: 'Octobre 2026',
     description: 'Vitrine des jeunes talents en arts visuels.',
-    image: 'https://images.unsplash.com/photo-1536924940846-227afb31e2a5?w=600&h=400&fit=crop',
-  },
-  {
-    icon: FaFutbol,
-    title: 'Tournoi de Football Inter-quartiers',
-    date: 'Décembre 2026',
-    description: 'Compétition amicale pour renforcer la cohésion.',
-    image: 'https://images.unsplash.com/photo-1579952363873-27f9bade9f55?w=600&h=400&fit=crop',
+    image: imgArtistesEmergents,
   },
   {
     icon: FaTheaterMasks,
     title: 'Soirée Théâtre Forum',
     date: 'Janvier 2026',
     description: 'Débats citoyens par le théâtre participatif.',
-    image: 'https://images.unsplash.com/photo-1585699324551-f6d3093eca1c?w=600&h=400&fit=crop',
+    image: imgTheatreForum,
   },
 ];
 
-// Images pour la galerie
-const galleryImages = [
-  'https://images.unsplash.com/photo-1532635241-17e820acc59f?w=400&h=300&fit=crop',
-  'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=400&h=300&fit=crop',
-  'https://images.unsplash.com/photo-1499364615650-ec38552f4f34?w=400&h=300&fit=crop',
-];
+const galleryImages = [imgGalerie1, imgGalerie2, imgGalerie3];
 
 export default function ActionsCulture() {
   return (
@@ -57,7 +53,7 @@ export default function ActionsCulture() {
           subtitle="Valoriser la richesse culturelle béninoise et promouvoir les talents locaux"
         />
 
-        {/* Introduction avec image */}
+        {/* Introduction avec image locale */}
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -97,8 +93,8 @@ export default function ActionsCulture() {
             className="rounded-3xl overflow-hidden shadow-xl"
           >
             <img
-              src="https://images.unsplash.com/photo-1532635241-17e820acc59f?w=800&h=600&fit=crop"
-              alt="Danse traditionnelle béninoise"
+              src={imgIntroCulture}
+              alt="Culture béninoise"
               className="w-full h-full object-cover"
             />
           </motion.div>
