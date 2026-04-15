@@ -28,15 +28,7 @@ const events = [
     type: 'Santé',
     image: 'https://images.unsplash.com/photo-1584515933487-779824d29309?w=800&h=500&fit=crop',
     description: 'Consultations gratuites, conseils nutritionnels et sensibilisation.',
-  },
-  {
-    title: 'Festival des Arts du Bénin',
-    date: '10-12 Avril 2026',
-    lieu: 'Maison de la Culture, Ouidah',
-    type: 'Culture',
-    image: 'https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6a3?w=800&h=500&fit=crop',
-    description: 'Expositions, spectacles de danse et concerts mettant en valeur les talents béninois.',
-  },
+  }
 ];
 
 export default function Events() {
