@@ -107,23 +107,23 @@ export default function Hero() {
                 {slides[currentIndex].buttonText}
               </Link>
 
-              {/* Avatars avec texte corrigé */}
-              <div className="mt-12 flex items-center gap-4">
-                <div className="flex -space-x-3">
-                  {avatars.map((avatar, idx) => (
-                    <img
-                      key={idx}
-                      src={avatar}
-                      alt="Membre"
-                      className="w-12 h-12 rounded-full border-2 border-white object-cover shadow-md"
-                    />
-                  ))}
-                </div>
-                <div className="text-white/90">
-                  <p className="font-semibold">+1280 personnes accompagnées</p>
-                  <p className="text-sm text-white/70">Rejoignez notre communauté</p>
-                </div>
-              </div>
+              {/* Avatars avec texte corrigé et ajustements responsifs */}
+<div className="mt-8 md:mt-12 flex items-center gap-3 md:gap-4">
+  <div className="flex -space-x-2 md:-space-x-3">
+    {avatars.map((avatar, idx) => (
+      <img
+        key={idx}
+        src={avatar}
+        alt="Membre"
+        className="w-10 h-10 md:w-12 md:h-12 rounded-full border-2 border-white object-cover shadow-md"
+      />
+    ))}
+  </div>
+  <div className="text-white/90">
+    <p className="font-semibold text-sm md:text-base">+1280 personnes accompagnées</p>
+    <p className="text-xs md:text-sm text-white/70">Rejoignez notre communauté</p>
+  </div>
+</div>
             </motion.div>
           </AnimatePresence>
         </div>
